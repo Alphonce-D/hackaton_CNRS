@@ -1,15 +1,15 @@
 <template>
   <section>
     <div id="timeline">
-      <div class="periode">
+      <div class="periode" id="antiquite">
         <div class="pointer" @click="antiMarker(this.gisements)"></div>
         <p>Antiquité</p>
       </div>
-      <div class="periode">
+      <div class="periode" id="moderne">
         <div class="pointer" @click="modernMarker(this.gisements)"></div>
         <p>Epoque Moderne</p>
       </div>
-      <div class="periode">
+      <div class="periode" id="romaine">
         <div class="pointer" @click="romainMarker(this.gisements)"></div>
         <p>Epoque Romaine</p>
       </div>
@@ -57,6 +57,9 @@ export default {
       for(let i = 0; i < 20; i++) {
         const marker = L.marker( [coords[i].x, coords[i].y] ).addTo(this.layerGroup);
         marker.on('click', this.redirect);
+        marker.on('mouseover', () => {
+          marker.openPopup();
+        });
       }
 
     },
@@ -67,6 +70,9 @@ export default {
      for(let i = 0; i < 20; i++) {
       const marker = L.marker( [coords[i].x, coords[i].y]).addTo(this.layerGroup);
       marker.on('click', this.redirect);
+      marker.on('mouseover', () => {
+        marker.openPopup();
+      });
     }
   },
 
@@ -75,19 +81,26 @@ export default {
     for(let i = 21; i < 47; i++) {
       const marker = L.marker( [coords[i].x, coords[i].y]).addTo(this.layerGroup);
       marker.on('click', this.redirect);
+      marker.on('mouseover', () => {
+        marker.openPopup();
+      });
     }
-  },
+},
 
   romainMarker(coords) {
     this.layerGroup.clearLayers();
     for( let i = 48; i < 59; i++) {
       const marker = L.marker( [coords[i].x, coords[i].y] ).addTo(this.layerGroup);
       marker.on('click', this.redirect);
+      marker.on('mouseover', () => {
+        marker.openPopup();
+      });
+
     }
   },
 
   redirect() {
-    this.$router.push('/');
+    window.location = 'https://lopez.simplon-charleville.fr/preprod/Quizz_poo_js/';
   }
     
   }

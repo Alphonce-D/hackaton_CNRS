@@ -1,6 +1,6 @@
 #timeline {
   height: 60px;
-  background: #000;
+  background: #FFF;
   display: flex;
   justify-content: space-around ;
   align-items: center;
@@ -13,7 +13,6 @@
 .pointer {
   width: 25px;
   height: 25px;
-  background: #FFF;
   border-radius: 25px;
   cursor: pointer;
   margin-bottom: 4px;
@@ -27,6 +26,21 @@
 
 p {
   margin: 0;
-  color: #FFF;
+  color: #000;
+}
+
+#antiquite {
+  // background-image: url("../../../assets/vase.svg");
+  // width: 25px;
+}
+
+#moderne {
+  // background-image: url("../../../assets/city.svg");
+  // width: 25px;
+}
+
+#romaine {
+  // background-image: url("../../../assets/casque-romain.svg");
+  // width: 25px;
 }
 

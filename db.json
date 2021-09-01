@@ -1,0 +1,20 @@
+{
+  "gisements" : [
+  {
+      "nom" : "test",
+      "periode" : "Moderne"
+  },
+  {
+      "nom" : "test2",
+      "periode" : "Antiquité"
+  },
+  {
+      "nom" : "test3",
+      "periode" : "Moderne"
+  },
+  {
+      "nom" : "test4",
+      "periode" : "Moderne"
+  }
+  ] 
+}
